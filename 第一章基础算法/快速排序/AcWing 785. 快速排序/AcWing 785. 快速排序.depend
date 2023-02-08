@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1675829818 source:d:\study\c++\acwing\第一章基础算法\快速排序\acwing 785. 快速排序\main.cpp
+	<iostream>
+	<vector>
+	<stdio.h>
+
