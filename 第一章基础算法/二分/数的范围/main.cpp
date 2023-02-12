@@ -15,29 +15,29 @@ int main()
             cin>>x;
             //Çó×ó±ßµã
             l=0;r=n-1;
-            if(l<r){
-                while(l<r){
-                    mid=l+r>>1;
-                    if(x<=nums[mid])
-                        r=mid;
-                    else
-                        l=mid+1;
-                }
-                if(nums[l]!=x)
-                    cout<<"-1 -1"<<endl;
-                else{
-                    cout<<l<<" ";
-                    l=0;r=n-1;
-                    while(l<r){
-                        mid=l+r+1>>1;
-                        if(x>=nums[mid])
-                            l=mid;
-                        else
-                            r=mid-1;
-                    }
-                    cout<<r<<endl;
-                }
+
+            while(l<r){
+                mid=l+r>>1;
+                if(x<=nums[mid])
+                    r=mid;
+                else
+                    l=mid+1;
             }
+            if(nums[l]!=x)
+                cout<<"-1 -1"<<endl;
+            else{
+                cout<<l<<" ";
+                l=0;r=n-1;
+                while(l<r){
+                    mid=l+r+1>>1;
+                    if(x>=nums[mid])
+                        l=mid;
+                    else
+                        r=mid-1;
+                }
+                cout<<r<<endl;
+            }
+
         }
     }
     return 0;
