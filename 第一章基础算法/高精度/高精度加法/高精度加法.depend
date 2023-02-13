@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1676193898 source:d:\study\c++\acwing\第一章基础算法\高精度\高精度加法\main.cpp
+	<iostream>
+	<vector>
+	<string>
+
