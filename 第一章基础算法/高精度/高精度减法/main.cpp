@@ -49,7 +49,6 @@ int main(){
         for(int i=b.size()-1;i>=0;i--)
             B.push_back(b[i]-'0');
         int num=compare(A,B);
-        cout<<"num=>"<<num<<endl;
         if(num>=0){
             C=sub(A,B);
             print(C);

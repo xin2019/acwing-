@@ -6,11 +6,11 @@ using namespace std;
 
 int Partition(vector<int>& nums,int low,int high){
     int pivot=nums[low];
-    while(low < high){
-        while(low < high && pivot <= nums[high]) high--;
-        nums[low] = nums[high];
-        while(low < high && pivot >= nums[low]) low++;
-        nums[high] = nums[low];
+    while(low<high){
+        while(low<high&&pivot<=nums[high]) high--;
+        nums[low]=nums[high];
+        while(low<high&&pivot>=nums[low]) low++;
+        nums[high]=nums[low];
     }
     nums[low]=pivot;
     return low;
@@ -18,8 +18,8 @@ int Partition(vector<int>& nums,int low,int high){
 int QuickSort(vector<int>& nums , int low ,int high){
     if(low<high){
         int index=Partition(nums,low,high);
-        QuickSort(nums, low , index-1);
-        QuickSort(nums, index+1, high);
+        QuickSort(nums,low,index-1);
+        QuickSort(nums,index+1,high);
     }
 }
 
