@@ -1,4 +1,4 @@
-# acwing算法基础课 题目 c++  ide为codeblocks
+# acwing算法基础课 题目 c++  IDE为codeblocks
 
 知识点
 
