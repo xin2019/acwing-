@@ -8,6 +8,7 @@ vector<PII> segs;
 void merge(vector<PII>& segs){
     int st=-1e9,ed=-1e9;
     vector<PII> res;
+    sort(segs.begin(),segs.end());
     for(int i=0;i<segs.size();i++){
         if(ed<segs[i].first){
             if(st!=-1e9)
