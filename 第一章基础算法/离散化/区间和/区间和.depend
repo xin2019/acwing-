@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1676854367 source:d:\study\c++\acwing\第一章基础算法\离散化\区间和\main.cpp
+	<iostream>
+	<vector>
+	<string.h>
+	<algorithm>
+
