@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1676876246 source:d:\study\c++\acwing\第一章基础算法\区间合并\区间合并\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
