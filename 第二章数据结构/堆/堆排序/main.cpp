@@ -1,67 +1,32 @@
 #include<iostream>
 using namespace std;
 const int N=1e5+10;
+int n,m,heapSize;
 int h[N];
-int len;
-int n,m;
-/*
-    –°∂•∂—
-*/
-//…œ“∆≤Ÿ◊˜
-void up(int i){
-    while(i/2&&h[i/2]>h[i]){
-        swap(h[i/2],h[i]);
-        i/=2;
-    }
-}
-//œ¬“∆
+//Â∞èÈ°∂Â†Ü
 void down(int u){
     int t=u;
-    if(u*2<=len&&h[u*2]<h[t])
+    if(u*2<=heapSize&&h[u*2]<h[t])
         t=u*2;
-    if(u*2+1<=len&&h[u*2+1]<h[t])
+    if(u*2+1<=heapSize&&h[u*2+1]<h[t])
         t=u*2+1;
-    if(t!=u){
+    if(u!=t)
+    {
+
         swap(h[u],h[t]);
         down(t);
     }
 }
-//≤Â»Î“ª∏ˆ ˝
-void insertItem(int val){
-    h[++len]=val;
-    up(len);
-}
-//«ÛºØ∫œ÷–µƒ◊Ó–°÷µ
-int getMin(){
-    return h[1];
-}
-//…æ≥˝◊Ó–°÷µ
-void removeMin(){
-    swap(h[1],h[len--]);
-    down(1);
-}
-//…æ≥˝»Œ“‚“ª∏ˆ‘™Àÿ
-void removeItem(int k){
-    h[k]=h[len--];
-    down(k);up(k);//’‚¡Ω∏ˆ÷ªª·÷¥––∆‰÷–“ª∏ˆ
-}
-//–ﬁ∏ƒ»Œ“‚“ª∏ˆ‘™Àÿ
-void alterItem(int k,int val){
-    h[k]=val;
-    down(k);up(k);//’‚¡Ω∏ˆ÷ªª·÷¥––∆‰÷–“ª∏ˆ
-}
 int main(){
-
     cin>>n>>m;
-    len=n;
+    heapSize=n;
     for(int i=1;i<=n;i++)
         cin>>h[i];
-    for(int i=n/2;i;--i){
+    for(int i=n/2;i;i--)
         down(i);
-    }
     while(m--){
         cout<<h[1]<<' ';
-        h[1]=h[len--];
+        h[1]=h[heapSize--];
         down(1);
     }
     cout<<endl;
