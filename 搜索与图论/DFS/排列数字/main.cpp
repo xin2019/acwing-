@@ -1,19 +1,20 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
 const int N=10;
 int n;
-int state[N],path[N];
+int path[N];
+int state[N];
 void dfs(int u){
     if(u>n){
-        for(int i=1;i<=n;i++){
+        for(int i=1;i<=n;i++)
             cout<<path[i]<<' ';
-        }
         cout<<endl;
     }
     for(int i=1;i<=n;i++){
         if(!state[i]){
-            state[i]=1;
             path[u]=i;
+            state[i]=1;
             dfs(u+1);
             state[i]=0;
         }

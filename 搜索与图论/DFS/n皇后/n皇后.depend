@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1678505941 source:d:\study\c++\acwing\搜索与图论\dfs\n皇后\main.cpp
+1678585972 source:d:\study\c++\acwing\搜索与图论\dfs\n皇后\main.cpp
 	<iostream>
+	<cstring>
 
