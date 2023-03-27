@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1679885640 source:d:\study\c++\acwing\搜索与图论\染色法判定二分图\染色法判定二分图\main.cpp
+	<iostream>
+	<cstring>
+
